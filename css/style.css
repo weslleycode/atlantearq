@@ -1,0 +1,245 @@
+/*Reset*/
+
+body, h1, h2, h3, p, ul, li, a {
+	margin: 0px;
+	padding: 0px;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+
+/*NAV_BAR*/
+
+.load{
+    animation: animate 2s infinite;
+}
+
+.slider{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:right;
+    width: 100%;
+    height: 100vh;
+    animation: animate 7s infinite;
+    
+}
+
+.content{
+    color: #fff;
+    width: 100%;
+    height: 100vh;   
+}
+
+.max-width{
+    max-width: 100%;
+    margin: auto;
+    padding: 20px 10px;
+}
+
+.navbar{
+    width: 100%;
+    z-index: 999;
+    transition: all 0.3s ease;
+}
+.navbar .max-width{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;   
+}
+
+.navbar .menu li a{
+	font-family:'DM Sans';
+    font-weight: 700;
+    text-transform: uppercase;
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 1.3em;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+.navbar .menu li a:hover{
+    color:#ff1010;
+}
+.navbar.sticky .menu li a:hover{
+    color: #fff;
+}
+
+.container_titulo{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 160px 10px;
+    text-align: center;
+    align-items: center;
+    color: rgb(255, 255, 255);  
+}
+
+.container_titulo h1{
+    font-family:'DM Sans';
+    font-weight: 700;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+
+
+/* hamburguer */
+
+.hamburguer{
+    max-width: 35px;
+    position: relative;
+    cursor: pointer;
+    display: none;
+}
+
+/*media query start*/
+
+@media screen and (max-width:900px){
+    .hamburguer{
+       display: block;
+       z-index: 999;
+    }
+    .menu{
+        display: flex;
+        position: fixed;       
+        top: 0;
+        right: 0;
+        height: 100vh;
+        margin: 0;
+        background-color: #222222;
+        width: 100%;
+        max-width: 450px;
+        padding: 30px 0;
+        flex-direction: column;
+        align-items: center;
+        transition: all 0.3s ease;
+    }
+
+    .menu.active{
+        right: -100%;
+    }
+
+    .navbar .menu li a{
+        padding: 20px 10px;
+        margin-left: 0px;
+    }
+    }
+
+@media (max-width: 991px) {
+    .max-width{
+        padding: 10px;
+        font-family:'Poppins';
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1em;   
+    }
+}
+@media (max-width: 767px){
+	.navbar{ 
+	  justify-content: space-between;
+	}
+	}
+
+
+/*Logo*/
+
+.logo{
+    max-width:200px;
+}
+
+
+@keyframes animate {
+    0%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.3)), url(../img/inicial2.jpg);
+    }
+  
+    100%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.3)), url(../img/inicial1.jpg);
+    }
+}
+
+
+.sobre{
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 10px 130px 10px;
+    background-color: black;
+   
+}
+
+.containerlogo{
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 100px;
+    display: inline-block;
+}
+
+.logo1{
+    max-width: 340px;
+}
+
+.sobre h1{
+    color: rgb(255, 255, 255);
+    font-family:'DM Sans';
+    font-weight: 700;
+    margin: 20px 10px;
+    font-size: 35px;
+    line-height: 1.7em;
+    text-align: center;
+}
+
+.sobre p {
+    color: rgb(156, 156, 156);
+    font-family:'DM Sans';
+    font-weight: 300;
+    margin: 20px 10px;
+    font-size: 22px;
+    line-height: 1.7em;
+    text-align: center;
+}
+
+
+.contatos{
+    text-align: center;
+    background-color: #080808;
+    padding: 20px 10px;
+}
+
+
+.contatos h1{
+margin: 10px;
+font-family:'DM Sans';
+font-weight: 700;
+color: rgb(255, 255, 255);
+font-size: 1.5em;
+}
+
+.contatos p{
+   max-width: 1000px;
+   margin: 0 auto;
+   padding: 10px;
+   color: rgb(156, 156, 156);
+   font-family:'DM Sans';
+   font-weight: 300;
+   font-size: 1em;
+   line-height: 0.5em; 
+}
